@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D463D"
+    tools:context=".ComunityActivity">
+
+    <Button
+        android:id="@+id/to_main"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/review"
+        android:onClick="goMainActivity"
+        android:text="독후감"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/to_discussion"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/discussion"
+        android:onClick="goDiscussionActivity"
+        android:text="토론"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/to_user_market"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/empty_button"
+        android:text="사고팔기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/to_search_books" />
+
+    <Button
+        android:id="@+id/to_search_books"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/empty_button"
+        android:text="책 검색"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owner_reviews" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/owner_reviews"
+        android:layout_width="409dp"
+        android:layout_height="510dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to_main" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="142dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/community" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

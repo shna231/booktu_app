@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D463D"
+    tools:context=".reviewActivity.ShowReviewActivity"
+
+
+    >
+
+    <EditText
+        android:id="@+id/review_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/long_rec"
+        android:gravity="center"
+        android:hint="제목을 입력하세요."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/empty_button"
+        android:text="삭제"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/retouch_button"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/empty_button"
+        android:text="수정"
+        app:layout_constraintBottom_toBottomOf="@+id/delete_button"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/comment_buuton"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/empty_button"
+        android:text="댓글"
+        app:layout_constraintBottom_toBottomOf="@+id/delete_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="127dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_title"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/review_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/middle_rec"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="    "
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/delete_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/show_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/show_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="hint: author"
+        android:text="author"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/show_title" />
+
+    <TextView
+        android:id="@+id/show_publisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="hint: publisher"
+        android:text="publisher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/show_author" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
